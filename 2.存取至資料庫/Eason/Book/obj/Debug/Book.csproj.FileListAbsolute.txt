@@ -1,0 +1,5 @@
+C:\Users\user\Desktop\Homework1\2.存取至資料庫\Eason\Book\bin\Debug\Book.dll
+C:\Users\user\Desktop\Homework1\2.存取至資料庫\Eason\Book\bin\Debug\Book.pdb
+C:\Users\user\Desktop\Homework1\2.存取至資料庫\Eason\Book\obj\Debug\Book.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\Homework1\2.存取至資料庫\Eason\Book\obj\Debug\Book.dll
+C:\Users\user\Desktop\Homework1\2.存取至資料庫\Eason\Book\obj\Debug\Book.pdb

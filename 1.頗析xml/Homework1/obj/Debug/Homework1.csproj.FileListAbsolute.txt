@@ -1,0 +1,15 @@
+c:\users\user\documents\visual studio 2015\Projects\Homework1\Homework1\bin\Debug\Homework1.exe.config
+c:\users\user\documents\visual studio 2015\Projects\Homework1\Homework1\bin\Debug\Homework1.exe
+c:\users\user\documents\visual studio 2015\Projects\Homework1\Homework1\bin\Debug\Homework1.pdb
+c:\users\user\documents\visual studio 2015\Projects\Homework1\Homework1\obj\Debug\Homework1.csprojResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2015\Projects\Homework1\Homework1\obj\Debug\Homework1.exe
+c:\users\user\documents\visual studio 2015\Projects\Homework1\Homework1\obj\Debug\Homework1.pdb
+E:\Homework1\Homework1\bin\Debug\Homework1.exe.config
+E:\Homework1\Homework1\obj\Debug\Homework1.exe
+E:\Homework1\Homework1\obj\Debug\Homework1.pdb
+E:\Homework1\Homework1\bin\Debug\Homework1.exe
+E:\Homework1\Homework1\bin\Debug\Homework1.pdb
+E:\Homework1\Homework1\obj\Debug\Homework1.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\Homework1\Homework1\Homework1\bin\Debug\Homework1.exe.config
+C:\Users\user\Desktop\Homework1\Homework1\Homework1\obj\Debug\Homework1.exe
+C:\Users\user\Desktop\Homework1\Homework1\Homework1\obj\Debug\Homework1.pdb
