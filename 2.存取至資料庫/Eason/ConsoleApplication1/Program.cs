@@ -15,7 +15,7 @@ namespace ConsoleApplication1
             List<Booklist> list = new List<Booklist>();
             XDocument xml = XDocument.Load("C:/isbn.xml");
             var db = new Book.Repository.DB_Repository();
-            var booknodes = xml.Descendants("Book");
+           /* var booknodes = xml.Descendants("Book");
             foreach (var bookNode in booknodes)
             {
                 var item = new Booklist();
@@ -26,16 +26,23 @@ namespace ConsoleApplication1
                 item.ISBN = bookNode.Element("ISBN").Value.Trim();
                 list.Add(item);
 
-            }
+            }*/
            
             db.Create(list);
-            /*  for (int i = 0; i < list.Count; i++)
+            List<Booklist> DB_book = db.FindAllBook();
+            
+            for (int i = 0; i < DB_book.Count; i++)
               {
-                  Console.WriteLine("書名:" + list[i].BookName);
-                  Console.WriteLine("作者:" + list[i].Author);
-                  Console.WriteLine("出版日期:" + list[i].Date);
-                  Console.WriteLine("ISBN:" + list[i].ISBN);
-              }*/
+                  Console.WriteLine("書名:" + DB_book[i].BookName);
+                  Console.WriteLine("作者:" + DB_book[i].Author);
+                  Console.WriteLine("出版日期:" + DB_book[i].Date);
+                  Console.WriteLine("ISBN:" + DB_book[i].ISBN);
+              }
         }
+
+
+
+        
     }
+
 }
