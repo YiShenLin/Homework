@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using Book.Model;
+using Book.Repository;
 namespace ConsoleApplication1
 {
     class Program
@@ -13,6 +14,7 @@ namespace ConsoleApplication1
         {
             List<Booklist> list = new List<Booklist>();
             XDocument xml = XDocument.Load("C:/isbn.xml");
+            var db = new Book.Repository.DB_Repository();
             var booknodes = xml.Descendants("Book");
             foreach (var bookNode in booknodes)
             {
@@ -25,13 +27,15 @@ namespace ConsoleApplication1
                 list.Add(item);
 
             }
-            for (int i = 0; i < list.Count; i++)
-            {
-                Console.WriteLine("書名:" + list[i].BookName);
-                Console.WriteLine("作者:" + list[i].Author);
-                Console.WriteLine("出版日期:" + list[i].Date);
-                Console.WriteLine("ISBN:" + list[i].ISBN);
-            }
+           
+            db.Create(list);
+            /*  for (int i = 0; i < list.Count; i++)
+              {
+                  Console.WriteLine("書名:" + list[i].BookName);
+                  Console.WriteLine("作者:" + list[i].Author);
+                  Console.WriteLine("出版日期:" + list[i].Date);
+                  Console.WriteLine("ISBN:" + list[i].ISBN);
+              }*/
         }
     }
 }

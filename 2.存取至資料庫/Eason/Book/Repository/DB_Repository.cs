@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Book.Repository
 {
-    class DB_Repository
+    public class DB_Repository
     {
-        private const string _connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Source\Repos\Homework\2.存取至資料庫\Eason\ConsoleApplication1\APP_Data\BookDB.mdf;Integrated Security = True";
+        private const string _connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Source\Repos\Homework\2.存取至資料庫\Eason\ConsoleApplication1\APP_Data\BookDB.mdf;Integrated Security=True";
 
 
         public void Create(List<Book.Model.Booklist> stations)
@@ -21,9 +21,10 @@ namespace Book.Repository
             {
                 var command = new System.Data.SqlClient.SqlCommand("", connection);
                 command.CommandText = string.Format(@"
-INSERT        INTO    Station(ISBN, BookName,Author,Date)
-VALUES          (N'{0}',N'{1}',N'{2}',N'{3}',N'{4}')
-", station.ISBN, station.BookName, station.Author, station.Date);
+INSERT        INTO    Tablee(ISBN, BookName,Author,Date)
+VALUES          (N'{0}',N'{1}',N'{2}',N'{3}')
+", station.ISBN.Replace("'", "''"), station.BookName.Replace("'", "''"), station.Author.Replace("'", "''"), station.Date);
+
 
                 command.ExecuteNonQuery();
             }
