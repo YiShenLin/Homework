@@ -8,3 +8,8 @@ C:\Users\user\Source\Repos\Homework\2.存取至資料庫\Eason\Book\bin\Debug\Bo
 C:\Users\user\Source\Repos\Homework\2.存取至資料庫\Eason\Book\obj\Debug\Book.csprojResolveAssemblyReference.cache
 C:\Users\user\Source\Repos\Homework\2.存取至資料庫\Eason\Book\obj\Debug\Book.dll
 C:\Users\user\Source\Repos\Homework\2.存取至資料庫\Eason\Book\obj\Debug\Book.pdb
+C:\Users\LEO\Desktop\UP\3.web專案\Eason\Book\bin\Debug\Book.dll
+C:\Users\LEO\Desktop\UP\3.web專案\Eason\Book\bin\Debug\Book.pdb
+C:\Users\LEO\Desktop\UP\3.web專案\Eason\Book\obj\Debug\Book.csprojResolveAssemblyReference.cache
+C:\Users\LEO\Desktop\UP\3.web專案\Eason\Book\obj\Debug\Book.dll
+C:\Users\LEO\Desktop\UP\3.web專案\Eason\Book\obj\Debug\Book.pdb

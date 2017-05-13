@@ -1,0 +1,21 @@
+﻿@model List<Book.Model.Booklist>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>書籍清單</h2>
+<meta http-equiv="refresh" content="20" />
+<table class="table">
+    <thead><tr><td>ISBN</td><td>書籍名稱</td><td>作者</td><td>時間</td></tr></thead>
+    <tbody>
+        @foreach (var pd in this.Model) /* 使用foreach將所有商品列成表格元素 */
+        {
+            <tr>
+                <td>@pd.ISBN</td>
+                <td>@pd.BookName</td>
+                <td>@pd.Author</td>
+                <td>@pd.Date</td>
+            </tr>
+        }
+    </tbody>
+</table>

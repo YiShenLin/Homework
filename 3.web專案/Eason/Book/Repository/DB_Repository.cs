@@ -8,7 +8,7 @@ namespace Book.Repository
 {
     public class DB_Repository
     {
-        private const string _connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Source\Repos\Homework\2.存取至資料庫\Eason\ConsoleApplication1\APP_Data\BookDB.mdf;Integrated Security=True";
+        private const string _connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\LEO\Desktop\UP\3.web專案\Eason\ConsoleApplication1\APP_Data\BookDB.mdf;Integrated Security=True";
 
 
         public void Create(List<Book.Model.Booklist> Book)
@@ -34,7 +34,7 @@ VALUES          (N'{0}',N'{1}',N'{2}',N'{3}')
             connection.Close();
         }
 
-        public List<Book.Model.Booklist> FindAllBook()
+        public static List<Book.Model.Booklist> FindAllBook()
         {
             var result = new List<Book.Model.Booklist>();
             var connection = new System.Data.SqlClient.SqlConnection(_connectionString);

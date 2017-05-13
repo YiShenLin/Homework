@@ -14,9 +14,9 @@ namespace ConsoleApplication1
         {
             List<Booklist> list = new List<Booklist>();
             XDocument xml = XDocument.Load("C:/isbn.xml");
-            var db = new Book.Repository.DB_Repository();    
+            var db = new DB_Repository();    
             db.Create(list);
-            List<Booklist> DB_book = db.FindAllBook();
+            List<Booklist> DB_book = DB_Repository.FindAllBook();
             
             for (int i = 0; i < DB_book.Count; i++)
               {

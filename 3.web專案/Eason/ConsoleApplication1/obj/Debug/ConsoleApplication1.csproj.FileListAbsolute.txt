@@ -19,3 +19,13 @@ C:\Users\user\Source\Repos\Homework\2.存取至資料庫\Eason\ConsoleApplicatio
 C:\Users\user\Source\Repos\Homework\3.web專案\Eason\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
 C:\Users\user\Source\Repos\Homework\3.web專案\Eason\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
 C:\Users\user\Source\Repos\Homework\3.web專案\Eason\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\LEO\Desktop\UP\3.web專案\Eason\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\Users\LEO\Desktop\UP\3.web專案\Eason\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\LEO\Desktop\UP\3.web專案\Eason\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\LEO\Desktop\UP\3.web專案\Eason\ConsoleApplication1\bin\Debug\APP_Data\BookDB.mdf
+C:\Users\LEO\Desktop\UP\3.web專案\Eason\ConsoleApplication1\bin\Debug\APP_Data\BookDB_log.ldf
+C:\Users\LEO\Desktop\UP\3.web專案\Eason\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\LEO\Desktop\UP\3.web專案\Eason\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\LEO\Desktop\UP\3.web專案\Eason\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\LEO\Desktop\UP\3.web專案\Eason\ConsoleApplication1\bin\Debug\Book.dll
+C:\Users\LEO\Desktop\UP\3.web專案\Eason\ConsoleApplication1\bin\Debug\Book.pdb
