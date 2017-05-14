@@ -1,0 +1,50 @@
+﻿@model List<Book.Model.Booklist>
+@{
+    ViewBag.Title = "Index";
+    var searchstr = ViewBag.SearchString;
+}
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+       <meta http-equiv="refresh" content="20" />
+   -->
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <h2>書籍清單</h2>
+
+    <form class="form-inline"  method="post">
+        <div class ="form-group" >
+            <input type="search" class="form-control" name="Search" value=@searchstr placeholder="搜尋" >
+            <button class="btn btn-primary"  > <i class="material-icons" style="font-size:medium">search</i></button>
+        </div>
+   
+    </form>
+    <br/>
+    <table class="table table-bordered">
+        <thead> <tr> <th style="text-align:center;">ISBN</th> <th style="text-align:center;">書籍名稱</th> <th style="text-align:center;">作者</th> <th style="text-align:center;">時間</th> </tr> </thead>
+        <tbody>
+            @foreach (var pd in this.Model) /* 使用foreach將所有商品列成表格元素 */
+            {
+
+                <tr>
+                    <td>@pd.ISBN</td>
+                    <td>@pd.BookName</td>
+                    <td>@pd.Author</td>
+                    <td>@pd.Date</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <div>
+        @Html.ActionLink("返回書籍清單", "Index")
+    </div>
+
+</body>
+
+</html>
