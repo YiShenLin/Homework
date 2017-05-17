@@ -16,6 +16,7 @@ namespace WebApplication1.Controllers
             var AllBook = Book.Repository.DB_Repository.FindAllBook();
             var message = string.Format("共收到{0}書籍",AllBook.Count);
             AllBook.ForEach(x => message += string.Format("ISBN：{0}    , 書名:{1}    , 作者:{2}<br/>發佈時間:{3}<br/><br/>",x.ISBN,x.BookName,x.Author,x.Date));
+            ViewBag.ResultCount = AllBook.Count;
             return View(AllBook);
         }
         [HttpPost]
@@ -23,9 +24,9 @@ namespace WebApplication1.Controllers
         {
             var BookRepository = new Book.Repository.DB_Repository();
             var AllBook = Book.Repository.DB_Repository.FindAllBook();     
-            var SreachResult= AllBook.Where(x => x.BookName.Contains(Search) || x.ISBN.Contains(Search) || x.Author.Contains(Search)).ToList();
+            List<Book.Model.Booklist> SreachResult = AllBook.Where(x => x.BookName.Contains(Search) || x.ISBN.Contains(Search) || x.Author.Contains(Search)).ToList();
             ViewBag.SearchString=Search;
-
+            ViewBag.ResultCount =SreachResult.Count;
             return View(SreachResult);
         }
     }

@@ -1,7 +1,9 @@
 ﻿@model List<Book.Model.Booklist>
 @{
     ViewBag.Title = "Index";
-    var searchstr = ViewBag.SearchString;
+    string searchstr = ViewBag.SearchString;
+    int Count= ViewBag.ResultCount;
+    
 }
 <!DOCTYPE html>
 <html>
@@ -11,6 +13,9 @@
    -->
     <link href="~/Content/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+        
+   
 </head>
 
 <body>
@@ -18,27 +23,41 @@
 
     <form class="form-inline"  method="post">
         <div class ="form-group" >
-            <input type="search" class="form-control" name="Search" value=@searchstr placeholder="搜尋" >
+            @if (searchstr == "")
+            {
+                <input type="search" class="form-control" name="Search"  placeholder="搜尋">
+            }
+            else
+            {
+                <input type="search" class="form-control" name="Search" value=@searchstr placeholder="搜尋">
+            }
             <button class="btn btn-primary"  > <i class="material-icons" style="font-size:medium">search</i></button>
         </div>
    
     </form>
     <br/>
-    <table class="table table-bordered">
-        <thead> <tr> <th style="text-align:center;">ISBN</th> <th style="text-align:center;">書籍名稱</th> <th style="text-align:center;">作者</th> <th style="text-align:center;">時間</th> </tr> </thead>
-        <tbody>
-            @foreach (var pd in this.Model) /* 使用foreach將所有商品列成表格元素 */
-            {
+    @if (Count==0)
+    {
+       <p style="color:crimson; text-align:center; font-size:36px;">查無此項目</p>
+    }
+    else
+    {
+        <table class="table table-bordered">
+            <thead> <tr> <th style="text-align:center;">ISBN</th> <th style="text-align:center;">書籍名稱</th> <th style="text-align:center;">作者</th> <th style="text-align:center;">時間</th> </tr> </thead>
+            <tbody>
+                @foreach (var pd in this.Model) /* 使用foreach將所有商品列成表格元素 */
+                {
 
-                <tr>
-                    <td>@pd.ISBN</td>
-                    <td>@pd.BookName</td>
-                    <td>@pd.Author</td>
-                    <td>@pd.Date</td>
-                </tr>
-            }
-        </tbody>
-    </table>
+                    <tr>
+                        <td>@pd.ISBN</td>
+                        <td>@pd.BookName</td>
+                        <td>@pd.Author</td>
+                        <td>@pd.Date</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="~/Content/js/bootstrap.min.js"></script>
     <div>
