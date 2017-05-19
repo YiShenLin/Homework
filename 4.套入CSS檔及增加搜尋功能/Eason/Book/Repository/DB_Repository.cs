@@ -8,7 +8,7 @@ namespace Book.Repository
 {
     public class DB_Repository
     {
-        private const string _connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\LEO\Desktop\UP\4.套入CSS檔及增加搜尋功能\Eason\ConsoleApplication1\APP_Data\BookDB.mdf;Integrated Security=True";
+        private const string _connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Desktop\new\4.套入CSS檔及增加搜尋功能\Eason\ConsoleApplication1\APP_Data\BookDB.mdf;Integrated Security=True";
 
 
         public void Create(List<Book.Model.Booklist> Book)

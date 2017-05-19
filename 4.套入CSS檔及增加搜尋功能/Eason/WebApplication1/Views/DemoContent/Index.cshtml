@@ -36,28 +36,32 @@
    
     </form>
     <br/>
-    @if (Count==0)
-    {
-       <p style="color:crimson; text-align:center; font-size:36px;">查無此項目</p>
-    }
-    else
-    {
-        <table class="table table-bordered">
-            <thead> <tr> <th style="text-align:center;">ISBN</th> <th style="text-align:center;">書籍名稱</th> <th style="text-align:center;">作者</th> <th style="text-align:center;">時間</th> </tr> </thead>
-            <tbody>
-                @foreach (var pd in this.Model) /* 使用foreach將所有商品列成表格元素 */
-                {
+    <div class="list-group">
+        <a href="#" class="list-group-item active">
+            Books
+        </a>
+        @if (Count == 0)
+        {
+            <p style="color:crimson; text-align:center; font-size:36px;">查無此項目</p>
+        }
+        else
+        {
+            for (int i = 0; i < Model.Count; i++)
+            {
 
-                    <tr>
-                        <td>@pd.ISBN</td>
-                        <td>@pd.BookName</td>
-                        <td>@pd.Author</td>
-                        <td>@pd.Date</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    }
+                <a class="list-group-item">
+                    <h4 class="list-group-item-heading">@Model[i].ISBN</h4>
+                    <p class="list-group-item-text">@Model[i].BookName</p>
+                </a>
+
+            }
+        }
+
+
+
+    </div>
+
+   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="~/Content/js/bootstrap.min.js"></script>
     <div>

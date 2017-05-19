@@ -18,3 +18,8 @@ C:\Users\LEO\Desktop\UP\4.套入CSS檔及增加搜尋功能\Eason\Book\bin\Debug
 C:\Users\LEO\Desktop\UP\4.套入CSS檔及增加搜尋功能\Eason\Book\obj\Debug\Book.csprojResolveAssemblyReference.cache
 C:\Users\LEO\Desktop\UP\4.套入CSS檔及增加搜尋功能\Eason\Book\obj\Debug\Book.dll
 C:\Users\LEO\Desktop\UP\4.套入CSS檔及增加搜尋功能\Eason\Book\obj\Debug\Book.pdb
+C:\Users\user\Desktop\new\4.套入CSS檔及增加搜尋功能\Eason\Book\bin\Debug\Book.dll
+C:\Users\user\Desktop\new\4.套入CSS檔及增加搜尋功能\Eason\Book\bin\Debug\Book.pdb
+C:\Users\user\Desktop\new\4.套入CSS檔及增加搜尋功能\Eason\Book\obj\Debug\Book.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\new\4.套入CSS檔及增加搜尋功能\Eason\Book\obj\Debug\Book.dll
+C:\Users\user\Desktop\new\4.套入CSS檔及增加搜尋功能\Eason\Book\obj\Debug\Book.pdb

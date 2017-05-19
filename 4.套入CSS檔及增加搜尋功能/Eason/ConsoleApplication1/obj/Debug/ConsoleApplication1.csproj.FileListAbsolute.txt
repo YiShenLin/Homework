@@ -39,3 +39,13 @@ C:\Users\LEO\Desktop\UP\4.套入CSS檔及增加搜尋功能\Eason\ConsoleApplica
 C:\Users\LEO\Desktop\UP\4.套入CSS檔及增加搜尋功能\Eason\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
 C:\Users\LEO\Desktop\UP\4.套入CSS檔及增加搜尋功能\Eason\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
 C:\Users\LEO\Desktop\UP\4.套入CSS檔及增加搜尋功能\Eason\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\user\Desktop\new\4.套入CSS檔及增加搜尋功能\Eason\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\user\Desktop\new\4.套入CSS檔及增加搜尋功能\Eason\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\user\Desktop\new\4.套入CSS檔及增加搜尋功能\Eason\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\user\Desktop\new\4.套入CSS檔及增加搜尋功能\Eason\ConsoleApplication1\bin\Debug\APP_Data\BookDB.mdf
+C:\Users\user\Desktop\new\4.套入CSS檔及增加搜尋功能\Eason\ConsoleApplication1\bin\Debug\APP_Data\BookDB_log.ldf
+C:\Users\user\Desktop\new\4.套入CSS檔及增加搜尋功能\Eason\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\user\Desktop\new\4.套入CSS檔及增加搜尋功能\Eason\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\user\Desktop\new\4.套入CSS檔及增加搜尋功能\Eason\ConsoleApplication1\bin\Debug\Book.dll
+C:\Users\user\Desktop\new\4.套入CSS檔及增加搜尋功能\Eason\ConsoleApplication1\bin\Debug\Book.pdb
+C:\Users\user\Desktop\new\4.套入CSS檔及增加搜尋功能\Eason\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
