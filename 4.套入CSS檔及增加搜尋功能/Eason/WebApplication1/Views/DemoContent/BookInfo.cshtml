@@ -1,0 +1,105 @@
+﻿@model  Book.Model.Booklist
+@{
+    ViewBag.Title = "BookInfo";
+}
+<table width="590" border="0" cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr>
+            <td width="5">&nbsp;</td>
+            <td width="263" valign="top">
+                <table width="257" border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td width="257" height="39" background="/images/main_d01_img_01.jpg">
+                                <table width="180" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        <tr>
+                                            <td width="25">&nbsp;</td>
+                                            <td width="219" nowrap="" class="txt_left_serch">&nbsp; 書籍圖片   <span class="txt_left_serch_02">Product Pictures</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top" background="/images/main_d01_img_02.jpg">
+                               
+                             @if (Model.Image == "")
+                             {
+                               
+                                <img src="~/Image/NoImage.jpg" width="180" height="306">
+                             }
+                             else
+                             {
+                                <img src="@Model.Image" width="180" height="306">
+                             }
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </td>
+            <td width="287" valign="top">
+                <table width="186" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <td height="5"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="main_txt_01_d01">@Model.BookName</div>
+                <table width="146" height="8" align="center" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td height="5"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table width="100%" border="0" cellpadding="2" cellspacing="0" class="b01_main_txt_02">
+                    <tbody>
+                        <tr>
+                            <td align="left" valign="top">作者：</td>
+                            <td valign="top">@Model.Author</td>
+                        </tr>
+                        <tr>
+                            <td align="left" valign="top">出版社：</td>
+                            <td valign="top">@Model.PublishingHouse</td>
+                        </tr>
+                        <tr>
+                            <td align="left" valign="top">版次：</td>
+                            <td valign="top">@Model.Editon</td>
+                        </tr>
+                        <tr>
+                            <td align="left" valign="top">出版日期：</td>
+                            <td valign="top">@Model.Date</td>
+                        </tr>
+                        <tr>
+                            <td align="left" valign="top">標題：</td>
+                            <td valign="top">@Model.Title</td>
+                        </tr>
+                        <tr>
+                            <td align="left" valign="top">適讀對象：</td>
+                            <td valign="top">@Model.Readability</td>
+                        </tr>
+                        <tr>
+                            <td align="left" valign="top">類號：</td>
+                            <td valign="top">@Model.ClassMark</td>
+                        </tr>
+                        <tr>
+                            <td align="left" valign="top">ISBN：</td>
+                            <td valign="top">@Model.ISBN</td>
+                        </tr>
+                        <tr>
+                            <td width="10%" nowrap="" align="left" valign="top">版本說明：</td>
+                            <td valign="top">10 x 17 cm／全彩／1書／1 MP3／ 防水書套／左翻</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div>
+    <p></p>
+    @Html.ActionLink("返回書籍列表", "Index")
+</div>

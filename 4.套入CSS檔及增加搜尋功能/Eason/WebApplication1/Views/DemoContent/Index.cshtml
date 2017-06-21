@@ -49,11 +49,22 @@
             for (int i = 0; i < Model.Count; i++)
             {
 
-                <a class="list-group-item">
-                    <h4 class="list-group-item-heading">@Model[i].ISBN</h4>
-                    <p class="list-group-item-text">@Model[i].BookName</p>
-                </a>
+                
+                    <div class="list-group-item">
+                        <h4 class="list-group-item-heading">@Model[i].ISBN</h4>
+                        <p class="list-group-item-text">@Model[i].BookName</p>
+                        <br/>
+                        <p>
+                            <a href="/DemoContent/Edit?BookID=@Model[i].ID" class="btn btn-primary btn-sm">修改</a>
+                            &nbsp;
+                            <a href="/DemoContent/BookInfo?BookID=@Model[i].ID" class="btn btn-danger btn-sm">資訊</a>
+                        </p>
+                    </div>
 
+                    
+                        
+                    
+               
             }
         }
 

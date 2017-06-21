@@ -1,0 +1,257 @@
+﻿@model Book.Model.Booklist
+
+@{
+    ViewBag.Title = "Edit";
+
+}
+@section css{
+
+<style>
+    .cropit-image-preview {
+        background-color: #f8f8f8;
+        background-size: cover;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        margin-top: 7px;
+        width: 250px;
+        height: 250px;
+        cursor: move;
+    }
+
+    .cropit-image-background {
+        opacity: .2;
+        cursor: auto;
+    }
+
+    .image-size-label {
+        margin-top: 10px;
+    }
+
+    input {
+        display: block;
+    }
+
+    button[type="submit"] {
+        margin-top: 10px;
+    }
+
+    #result {
+        margin-top: 10px;
+        width: 900px;
+    }
+
+    #result-data {
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+    }
+</style>
+
+<link href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
+<link href="~/Content/sweetalert.css" rel="stylesheet" />
+}
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+   <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script src="~/Content/jquery.cropit.js"></script>
+    <script src="~/Content/sweetalert.min.js"></script>
+<!--<script>
+     $("#uploadImage").change(function () {
+         readImage(this);
+     });
+
+     function readImage(input) {
+         if (input.files && input.files[0]) {
+             var FR = new FileReader();
+             FR.onload = function (e) {
+                 //e.target.result = base64 format picture
+                 $('#img').attr("src", e.target.result);
+             };
+             FR.readAsDataURL(input.files[0]);
+         }
+     }
+</script>-->
+ <script type="text/javascript">
+
+        $(function () {
+
+          
+           
+            var options = {
+
+                width: 1000,
+                height: 1000,
+                maxZoom: 2,
+                onImageError: function (error) {
+                    if (error.code == 0) {
+                        swal({
+                            title: "請重新上傳圖片",
+                            text: "圖片路徑遺失",
+                            type: "warning",
+                            showCancelButton: false,
+                            confirmButtonClass: 'btn-info',
+                            confirmButtonText: '<i class="fa fa-check"></i>知道了!',
+                            closeOnConfirm: true
+                        });
+                        return;
+                    }
+                    if (error.code == 1) {
+                        swal({
+                            title: "圖檔太小",
+                            text: "",
+                            type: "warning",
+                            showCancelButton: false,
+                            confirmButtonClass: 'btn-info',
+                            confirmButtonText: '<i class="fa fa-check"></i>知道了!',
+                            closeOnConfirm: true
+                        });
+                        return;
+                    }
+                },
+                onFileReaderError: function () {
+                    swal({
+                        title: "請重新上傳圖片",
+                        text: "",
+                        type: "warning",
+                        showCancelButton: false,
+                        confirmButtonClass: 'btn-info',
+                        confirmButtonText: '<i class="fa fa-check"></i>知道了!',
+                        closeOnConfirm: true
+                    });
+                },
+                onImageLoaded: function () {
+                },
+                imageState: {
+                    src: 'http://lorempixel.com/1280/600/people/',
+                }
+            };
+
+           
+            $('.image-editor').cropit(options);
+            $('form').submit(function () {
+                var imageData = $('.image-editor').cropit('export');
+                $('.ImageData').val(imageData);
+                return true;
+            });
+
+        });
+
+
+
+
+
+    </script>
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>書本編輯</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.BookName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.BookName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.BookName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Author, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Author, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Author, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Date, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ISBN, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ISBN, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ISBN, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PublishingHouse, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PublishingHouse, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PublishingHouse, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Editon, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Editon, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Editon, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Readability, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Readability, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Readability, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ClassMark, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ClassMark, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ClassMark, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="image-editor ">
+            <div class="form-group form-inline">
+                @Html.Label("上傳檔案", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-offset-2 col-md-10">
+                    @*<input accept="image/*" id="uploadImage" type="file">
+                    <img alt="upload image" height="auto" id="img" src="" width="auto">*@
+                      <input type="hidden" name="ImageData" class="ImageData" />
+                    <input type="file" class="cropit-image-input"> 
+                </div>
+                
+            </div>
+         </div>
+            @Html.HiddenFor(model => model.ID)
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="變更" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+}
+
+<div>
+    @Html.ActionLink("返回書籍列表", "Index")
+</div>
+
+@*
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}    
+*@

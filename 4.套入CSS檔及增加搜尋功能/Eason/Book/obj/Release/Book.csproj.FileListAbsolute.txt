@@ -1,0 +1,5 @@
+C:\Users\LEO\Desktop\Homework\4.套入CSS檔及增加搜尋功能\Eason\Book\bin\Release\Book.dll
+C:\Users\LEO\Desktop\Homework\4.套入CSS檔及增加搜尋功能\Eason\Book\bin\Release\Book.pdb
+C:\Users\LEO\Desktop\Homework\4.套入CSS檔及增加搜尋功能\Eason\Book\obj\Release\Book.dll
+C:\Users\LEO\Desktop\Homework\4.套入CSS檔及增加搜尋功能\Eason\Book\obj\Release\Book.pdb
+C:\Users\LEO\Desktop\Homework\4.套入CSS檔及增加搜尋功能\Eason\Book\obj\Release\Book.csprojResolveAssemblyReference.cache
