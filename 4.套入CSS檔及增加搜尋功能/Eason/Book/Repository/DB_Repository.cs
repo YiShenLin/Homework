@@ -57,7 +57,7 @@ Select * from Tablee";
                 item.Title = reader["Title"].ToString();
                 item.Readability = reader["Readability"].ToString();
                 item.ClassMark = reader["ClassMark"].ToString();
-                item.Image= reader["Image"].ToString();
+                item.ImageURL= reader["ImageURL"].ToString();
                 result.Add(item);
             }
             connection.Close();
@@ -83,8 +83,8 @@ Select * from Tablee";
       ,[Title]=N'{6}'
       ,[Readability]=N'{7}'
       ,[ClassMark]=N'{8}'
-      ,[Image]=N'{9}'
- WHERE [ID] = N'{10}'", Book.BookName,Book.Author, Book.Date, Book.ISBN, Book.PublishingHouse, Book.Editon, Book.Title, Book.Readability, Book.ClassMark,Book.Image,Book.ID);
+      ,[ImageURL]=N'{9}'
+ WHERE [ID] = N'{10}'", Book.BookName,Book.Author, Book.Date, Book.ISBN, Book.PublishingHouse, Book.Editon, Book.Title, Book.Readability, Book.ClassMark,Book.ImageURL,Book.ID);
 
 
             command.ExecuteNonQuery();

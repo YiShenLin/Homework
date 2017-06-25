@@ -50,7 +50,7 @@ namespace WebApplication1.Controllers
                     Info.PublishingHouse = AllBook[i].PublishingHouse;
                     Info.Readability = AllBook[i].Readability;
                     Info.Title = AllBook[i].Title;
-                    Info.Image = AllBook[i].Image;
+                    Info.ImageURL = AllBook[i].ImageURL;
                     Info.ID = BookID;
                     break;
                 }
@@ -77,7 +77,7 @@ namespace WebApplication1.Controllers
                     Info.PublishingHouse = AllBook[i].PublishingHouse;
                     Info.Readability = AllBook[i].Readability;
                     Info.Title = AllBook[i].Title;
-                    Info.Image= AllBook[i].Image;
+                    Info.ImageURL= AllBook[i].ImageURL;
                     Info.ID = BookID; 
                     break;
                 }
@@ -85,12 +85,12 @@ namespace WebApplication1.Controllers
             return View(Info);
         }
         [HttpPost]
-        public ActionResult Edit(Book.Model.Booklist EditedBook,string ImageData)
+        public ActionResult Edit(Book.Model.Booklist EditedBook)
         {
             var storagePath = Server.MapPath("~/Image/");
             var contentPath = Url.Content("~/Image/");
             var BookRepository = new Book.Repository.DB_Repository();
-            try
+            /*try
             {
                 var base64Data = Regex.Match(ImageData, @"data:image/(?<type>.+?),(?<data>.+)").Groups["data"].Value;
                 var binData = Convert.FromBase64String(base64Data);
@@ -105,7 +105,7 @@ namespace WebApplication1.Controllers
             catch (Exception ex)
             {
                 return View();
-            }
+            }*/
             BookRepository.Update(EditedBook);
             return RedirectToAction("Index");
         }

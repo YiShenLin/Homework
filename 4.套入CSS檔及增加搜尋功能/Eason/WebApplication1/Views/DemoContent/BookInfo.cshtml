@@ -24,14 +24,14 @@
                         <tr>
                             <td valign="top" background="/images/main_d01_img_02.jpg">
                                
-                             @if (Model.Image == "")
+                             @if (Model.ImageURL == "")
                              {
                                
                                 <img src="~/Image/NoImage.jpg" width="180" height="306">
                              }
                              else
                              {
-                                <img src="@Model.Image" width="180" height="306">
+                                <img src="@Model.ImageURL" width="180" height="306">
                              }
                             </td>
                         </tr>

@@ -224,18 +224,13 @@
                 @Html.ValidationMessageFor(model => model.ClassMark, "", new { @class = "text-danger" })
             </div>
         </div>
-        <div class="image-editor ">
-            <div class="form-group form-inline">
-                @Html.Label("上傳檔案", htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-offset-2 col-md-10">
-                    @*<input accept="image/*" id="uploadImage" type="file">
-                    <img alt="upload image" height="auto" id="img" src="" width="auto">*@
-                      <input type="hidden" name="ImageData" class="ImageData" />
-                    <input type="file" class="cropit-image-input"> 
-                </div>
-                
+        <div class="form-group">
+            @Html.LabelFor(model => model.ImageURL, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ImageURL, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ImageURL, "", new { @class = "text-danger" })
             </div>
-         </div>
+        </div>
             @Html.HiddenFor(model => model.ID)
 
             <div class="form-group">

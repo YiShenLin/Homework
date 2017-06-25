@@ -18,6 +18,6 @@ namespace Book.Model
         public string Readability { get; set; }
         public string ClassMark { get; set; }
         public string ID { get; set; }
-        public string Image { get; set; }
+        public string ImageURL { get; set; }
     }
 }
